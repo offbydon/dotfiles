@@ -1,0 +1,17 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www.planbox.com/application/login_submit_google/1"
+      },
+      "urls": [ "*://www.planbox.com/" ]
+   },
+   "description": "Agile Project Management and Collaboration.",
+   "icons": {
+      "128": "128_new.png",
+      "64": "64_new.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtGD+uKEVhttQFdlY6uuzO5d1F62y7FNfFCBe9+xdLR6GLyaG2uYCTcEP2411vUUSr+xy3kTTU1mU8roflK5PVpZrrfAPfOyh/GzspS44p42NG0t5PQS229CnC05sNvmEzTLlErigS6/99EwKVNgtbIY9v+SSiJFZTX1PzPYnvvwIDAQAB",
+   "name": "Planbox - Agile Project Management Tool",
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.1.0"
+}

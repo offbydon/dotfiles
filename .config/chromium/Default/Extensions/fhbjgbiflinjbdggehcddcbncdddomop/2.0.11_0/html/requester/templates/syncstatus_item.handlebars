@@ -1,0 +1,11 @@
+<li id="syncstatus-{{id}}" data-id="{{id}}" class="sidebar-syncsatus">
+    <div class="sidebar-syncstatus-head">
+        <span class="label label-method-{{method}}">{{verb}}</span>
+        {{#if entity}}
+                <span class="syncnotif-entity">{{entity}}</span>
+                <span class="syncnotif-entity-name">"{{entityName}}"</span>{{#if user}} by <span class="syncnotif-user">{{user}}</span>{{/if}}
+        {{else}}
+            {{text}}
+        {{/if}}
+    </div>
+</li>

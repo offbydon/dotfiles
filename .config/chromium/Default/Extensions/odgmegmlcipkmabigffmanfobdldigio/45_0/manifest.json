@@ -1,0 +1,16 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://kerika.com/login"
+      },
+      "urls": [ "http://kerika.com/" ]
+   },
+   "icons": {
+      "128": "Kerika.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDs9RLVuv7EHui/qYZOQdN3F7nyG1hTxwIlFAh+LLyvKnI4mtiKxOutRMtX5kdxw03oUs2uK0l/9wD/Xp/2+EliM5KRIxPF1D2wSwhEiBOunWZf7m8fad22eSriqXfTJNu2x8p1SiX1YB+w9apriTLIavjI5XaS+jY+dWq01Ptq8wIDAQAB",
+   "manifest_version": 2,
+   "name": "Kerika",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "45"
+}

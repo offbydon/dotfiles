@@ -1,0 +1,51 @@
+<div id="modal-share-collection" class="modal fade">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal" id="modal-share-collection-close">x</a>
+
+        <h3>Share collection</h3>
+    </div>
+
+    <div class="modal-body">
+        <div id="uploadOwnCollection" class="share-section">
+            <pre id="upload-collection-link"></pre>
+            <a id="upload-collection-get-link" data-collection-id="" class="btn">Upload and get link</a>
+            <a id="copy-collection-url" class="btn">Copy URL</a>
+        </div>
+        <div id="shareOwnCollection" class="share-section">
+            <h4>Share your collection</h4>
+
+            <p>
+                Share this collection with your team.
+            </p>
+
+            <!--Not showing public link-->
+            <!--<div id="share-collection-directory-features">-->
+                <!--<label class="checkbox">-->
+                    <!--<input type="checkbox" id="share-collection-is-public" value="public"/>Add to the API directory-->
+                <!--</label>-->
+            <!--</div>-->
+
+            <!--<div id="share-collection-team-directory-features">-->
+                <!--<label class="checkbox">-->
+                    <!--<input type="checkbox" id="share-collection-team" value="private"/>Share with your team-->
+                <!--</label>-->
+            <!--</div>-->
+
+            <!--Not showing public link-->
+
+            <a id="share-collection-get-link" data-collection-id="" class="btn">Share</a>
+
+            <!--<a id="copy-collection-url" class="btn">Copy URL</a>-->
+        </div>
+        <div id="shareSubscribedCollection" class="share-section">
+            <a id="share-collection-unsubscribe" data-dismiss="modal" data-collection-id="" data-owner-id="" class="btn">Unsubscribe</a>
+        </div>
+        <div style="margin-top: 20px;" class="share-section">
+            <h4>Download as a file</h4>
+
+            <p>Get a JSON file to share with others or for backing up the collection.</p>
+            <a id="share-collection-download" data-collection-id="" class="btn">Download</a>
+        </div>
+        <hr/>
+    </div>
+</div>

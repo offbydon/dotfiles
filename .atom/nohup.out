@@ -1,0 +1,33 @@
+[11493:0325/093519:ERROR:browser_main_loop.cc(164)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+[11523:0325/093520:INFO:renderer_main.cc(211)] Renderer process started
+App load time: 283ms
+[11493:0325/093521:INFO:CONSOLE(56)] "Window load time: 1535ms", source: file:///opt/atom/resources/app/static/index.js (56)
+[11493:0325/093628:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093629:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093629:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093629:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093629:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093630:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093630:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093713:INFO:CONSOLE(146)] "", source: /home/ops/.atom/packages/virtualenv/lib/virtualenv-manager.coffee (146)
+[11493:0325/093752:INFO:CONSOLE(349)] "Installing package linter-pylint failed", source: /opt/atom/resources/app/node_modules/settings-view/lib/package-card.js (349)
+[11493:0325/093806:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093806:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093807:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093807:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093807:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+
+[11493:0325/093808:ERROR:browser_main_loop.cc(210)] Gdk: gdk_window_set_user_time called on non-toplevel
+

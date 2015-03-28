@@ -1,0 +1,18 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://overapi.com/?chrome"
+      }
+   },
+   "description": "Collecting All The Cheat Sheets",
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDwoiv5bFU1/LgNQkqNvDPnHIxPitWpgyjG/Akn91WStVoGWmvatl2RAzXeSkCqYRVwquWt+B4HYQ/PAMRfMgB/CBAhLh3agIMlXE8kh7/Gablcaub5OEjlxfFe5Msv0pqmMwwlY9vpyUjP0B6Sdz86dmDIMTDwHa6UrZwDYDI5wwIDAQAB",
+   "manifest_version": 2,
+   "name": "All Cheat Sheets",
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

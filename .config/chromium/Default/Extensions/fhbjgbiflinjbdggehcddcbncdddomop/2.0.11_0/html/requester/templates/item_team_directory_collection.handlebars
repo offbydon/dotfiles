@@ -1,0 +1,22 @@
+<tr id="team-directory-collection-{{id}}" class="team-directory-collection" data-id="{{id}}">
+    <td class="team-directory-collection-action-view" data-id="{{id}}">{{name}}</td>
+    <td class="description">{{description}}</td>
+    <td class="editable">
+        {{#if write}}
+            Yes
+        {{else}}
+            No (Read-only)
+        {{/if}}
+    </td>
+    <td class="user_name">{{owner.username}}</td>
+    <td class="updated_at"><strong>{{updated_at_formatted}}</strong></td>
+	{{#if canSubscribeTo}}
+        <td><a class="btn btn-primary btn-small team-directory-collection-action-subscribe" data-id="{{id}}" data-owner-id="{{owner.id}}">Subscribe</a></td>
+	{{else}}
+        {{#if isOwn}}
+            <td><span>Your collection</span></td>
+        {{else}}
+             <td><a class="btn btn-danger btn-small team-directory-collection-action-unsubscribe" data-id="{{id}}" data-owner-id="{{owner.id}}">Unsubscribe</a></td>
+        {{/if}}
+    {{/if}}
+</tr>

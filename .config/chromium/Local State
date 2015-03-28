@@ -1,0 +1,91 @@
+{
+   "app_list": {
+      "app_launch_count": 0,
+      "last_app_launch_ping": "13071974400000000",
+      "last_launch_ping": "13071974400000000",
+      "launch_count": 0
+   },
+   "browser": {
+      "enabled_labs_experiments": [  ],
+      "last_redirect_origin": ""
+   },
+   "gl_renderer_string": "Mesa DRI Intel(R) Ivybridge Mobile ",
+   "gl_vendor_string": "Intel Open Source Technology Center",
+   "gl_version_string": "3.0 Mesa 10.3.2",
+   "hardware_acceleration_mode_previous": true,
+   "local_state": {
+      "multiple_profile_prefs_version": 3
+   },
+   "network_time": {
+      "network_time_mapping": {
+         "local": 1427553043819.606,
+         "network": 1427553043828.868
+      }
+   },
+   "ntp": {
+      "promo_resource_cache_update": "1427551737.154401"
+   },
+   "policy": {
+      "last_statistics_update": "13072025332153075"
+   },
+   "profile": {
+      "info_cache": {
+         "Default": {
+            "active_time": 1427557033.924131,
+            "avatar_icon": "chrome://theme/IDR_PROFILE_AVATAR_0",
+            "background_apps": false,
+            "is_ephemeral": false,
+            "is_omitted_from_profile_list": false,
+            "is_using_default_avatar": true,
+            "is_using_default_name": true,
+            "managed_user_id": "",
+            "name": "First user",
+            "use_gaia_picture": false,
+            "user_name": "copyleftdev@gmail.com"
+         }
+      },
+      "last_active_profiles": [ "Default" ],
+      "last_used": "Default"
+   },
+   "rappor": {
+      "cohort_seed": 12,
+      "secret": "7H+9KA9LM5HMnEX2re/rXYZGEPDgPcjwyPgfkCjweFOeUdtI/W/RuEu39mKF6eKP"
+   },
+   "show-first-run-bubble-option": 0,
+   "shutdown": {
+      "num_processes": 0,
+      "num_processes_slow": 0,
+      "type": 0
+   },
+   "uninstall_metrics": {
+      "installation_date2": "1427300115",
+      "launch_count": "3"
+   },
+   "user_experience_metrics": {
+      "low_entropy_source2": 7516,
+      "session_id": 2,
+      "stability": {
+         "breakpad_registration_fail": 3,
+         "child_process_crash_count": 0,
+         "crash_count": 0,
+         "debugger_not_present": 3,
+         "execution_phase": 500,
+         "exited_cleanly": false,
+         "extension_renderer_crash_count": 0,
+         "incomplete_session_end_count": 0,
+         "last_timestamp_sec": "1427556832",
+         "launch_count": 3,
+         "launch_time_sec": "1427551732",
+         "page_load_count": 0,
+         "plugin_stats2": [  ],
+         "renderer_crash_count": 0,
+         "renderer_hang_count": 0,
+         "session_end_completed": true,
+         "stats_buildtime": "1220371200",
+         "stats_version": "41.0.2272.76-64-devel"
+      }
+   },
+   "was": {
+      "restarted": false
+   }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/ops/Documents/test.py" added="2015-03-25T16:58:13Z" modified="2015-03-25T16:58:13Z" visited="2015-03-25T16:58:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="atom" exec="&apos;atom %u&apos;" modified="2015-03-25T16:58:13Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ops/.atom/packages/build/spec/fixture/.atom-build.shell.json" added="2015-03-25T17:07:13Z" modified="2015-03-25T17:07:13Z" visited="2015-03-25T17:07:13Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2015-03-25T17:07:13Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/ops/Pictures/offbydon.jpg" added="2015-03-28T14:13:49Z" modified="2015-03-28T14:13:58Z" visited="2015-03-28T14:13:49Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="chromium-browser" exec="&apos;chromium-browser %u&apos;" modified="2015-03-28T14:13:58Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

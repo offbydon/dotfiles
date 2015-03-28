@@ -1,0 +1,45 @@
+openConnection: connect: No such file or directory
+cannot connect to brltty at :0
+Script for ibus started at run_im.
+Script for auto started at run_im.
+Script for default started at run_im.
+upstart: at-spi2-registryd main process ended, respawning
+upstart: at-spi2-registryd main process ended, respawning
+upstart: at-spi2-registryd main process ended, respawning
+upstart: at-spi2-registryd main process ended, respawning
+upstart: at-spi2-registryd main process ended, respawning
+upstart: at-spi2-registryd main process ended, respawning
+upstart: at-spi2-registryd main process ended, respawning
+upstart: at-spi2-registryd main process ended, respawning
+upstart: at-spi2-registryd main process ended, respawning
+upstart: at-spi2-registryd main process ended, respawning
+upstart: at-spi2-registryd respawning too fast, stopped
+upstart: upstart-event-bridge main process (2212) terminated with status 1
+upstart: upstart-event-bridge main process ended, respawning
+upstart: upstart-dbus-session-bridge main process (2229) terminated with status 1
+upstart: upstart-dbus-session-bridge main process ended, respawning
+upstart: upstart-file-bridge main process (2231) terminated with status 1
+upstart: upstart-file-bridge main process ended, respawning
+upstart: upstart-dbus-system-bridge main process (2233) terminated with status 1
+upstart: upstart-dbus-system-bridge main process ended, respawning
+upstart: upstart-event-bridge main process (8331) terminated with status 1
+upstart: upstart-event-bridge main process ended, respawning
+upstart: upstart-dbus-session-bridge main process (8344) terminated with status 1
+upstart: upstart-dbus-session-bridge main process ended, respawning
+upstart: upstart-dbus-system-bridge main process (8346) terminated with status 1
+upstart: upstart-dbus-system-bridge main process ended, respawning
+upstart: upstart-file-bridge main process (8348) terminated with status 1
+upstart: upstart-file-bridge main process ended, respawning
+upstart: unity-settings-daemon main process (2390) terminated with status 1
+upstart: hud main process (2388) terminated with status 1
+upstart: gnome-session (Unity) main process (2397) terminated with status 1
+upstart: unity-panel-service main process (2402) terminated with status 1
+upstart: indicator-bluetooth main process (2453) killed by TERM signal
+upstart: indicator-power main process (2458) killed by TERM signal
+upstart: indicator-datetime main process (2460) killed by TERM signal
+upstart: indicator-keyboard main process (2461) terminated with status 1
+upstart: indicator-printers main process (2463) terminated with status 1
+upstart: indicator-session main process (2465) killed by TERM signal
+upstart: indicator-application main process (2475) killed by TERM signal
+upstart: unity7 main process (2395) terminated with status 1
+upstart: Disconnected from notified D-Bus bus

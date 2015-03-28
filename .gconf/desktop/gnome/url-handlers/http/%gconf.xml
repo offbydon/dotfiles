@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="enabled" mtime="1427551734" type="bool" value="true"/>
+	<entry name="needs_terminal" mtime="1427551734" type="bool" value="false"/>
+	<entry name="command" mtime="1427551734" type="string">
+		<stringvalue>/usr/bin/chromium-browser %s</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,79 @@
+#modal-eula-notif {
+    width: 600px;
+    height: 550px;
+    margin-left: -300px;
+    -webkit-user-select: initial;
+
+    .modal-body {
+        padding-right: 100px;
+        border-bottom: 0px !important;
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+}
+
+.eula-logo {
+    height: 90px;
+    width: 90px;
+    float: left;
+    position: absolute;
+}
+
+.eula-heading {
+    color: #f25923;
+    font-size: 28px;
+    font-family: 'Titillium Web', Helvetica;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    margin-left: 110px;
+}
+
+.eula-sub-heading {
+    color: #666666;
+    font-size: 20px;
+    font-family: 'Open Sans', Helvetica;
+    font-weight: normal;
+    line-height: 26px;
+    margin-left: 110px;
+}
+
+.eula-main-text {
+    line-height: 24px;
+    font-size: 15px;
+    color: $eula-text-color;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 110px;
+    font-weight: 300;
+
+    a {
+        color: #6095e3;
+        font-weight: 400;
+    }
+}
+
+.eula-agree-button {
+    border: 3px solid #6095e3;
+    color: #6095e3;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent;
+    padding: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-left: 110px;
+    margin-top: 20px;
+}
+
+button.sync-eula {
+    font-size: 18px;
+}
+
+.eula-footnote {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Open Sans', sans-serif;
+
+    margin-left: 110px;
+    margin-top: 15px;
+}

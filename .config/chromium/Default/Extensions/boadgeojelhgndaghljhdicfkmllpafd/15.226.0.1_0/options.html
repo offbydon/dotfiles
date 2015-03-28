@@ -1,0 +1,273 @@
+<html ng-app="optionsController" ng-controller="OptionsCtrl" ng-csp xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>
+    Google Cast extension options
+  </title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet"/>
+  <link href="options.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="angular.js"></script>
+  <script type="text/javascript" src="background_script.js"></script>
+</head>
+<body id="options"
+    ng-class="{'scrolling-disabled': isChromekeySetupActive}">
+  <div class="fixed-top">
+    <header>
+      <img id="cast-icon" src="data/icon48.png" alt="Cast" ng-dblclick="doubleClicks = doubleClicks + 1">
+      <h1 class="top-title">
+        <angular-message desc="Options page header" key="options_title">
+          Google Cast extension options
+        </angular-message>
+      </h1>
+    </header>
+  </div>
+  <div class="options-sections">
+    <section class="chromekey-setup-frame-section">
+      <iframe id="chromekeySetupFrame" src="dongle_setup_flow.html"
+          ng-class="{'chromekey-setup-frame-active': isChromekeySetupActive}"
+          frameborder="0" width="100%" height="100%">
+      </iframe>
+    </section>
+    <section>
+      <h3>
+        <angular-message desc="Label for section about selecting quality of tab casting" key="options_tab_proj_quality">
+          Tab casting quality
+        </angular-message>
+      </h3>
+      <span ng-repeat="q in qualityLevels" class="controlled-setting-with-label">
+        <input ng-disabled="isMirroring" type="radio" ng-model="model.quality" value="{{q.id}}" id="ql-{{q.id}}"/>
+        <label for="ql-{{q.id}}">{{q.name}}</label>
+      </span>
+    </section>
+    <span class="controlled-setting-with-label">
+      <input ng-model="sendUsage" type="checkbox" id="sendUsage">
+        <angular-message desc="Label for sending usage statistics" key="options_send_usage">
+          Automatically send Cast extension usage statistics to Google.
+        </angular-message>
+      </input>
+    </span>
+    <div class="fixed-bottom" ng-show="showStopCasting">
+      <div>
+        <angular-message desc="Note about when changes take effect" key="options_change_effect">
+          Your changes will take effect the next time you cast a tab.
+        </angular-message>
+      </div>
+      <button ng-click="stopCasting()" id="stopCasting">
+        <angular-message desc="Button to stop casting immediately" key="options_stop_casting">
+          Stop casting now
+        </angular-message>
+      </button>
+    </div>
+  </div>
+  <div ng-show="showCastouts" class="options-sections">
+    <section>
+      <h3>
+        <angular-message desc="Label for casting to Hangouts section" key="options_tab_castouts">
+          Casting to Hangouts
+        </angular-message>
+      </h3>
+      <p>
+        <input ng-model="isCastoutsEnabled" type="checkbox" id="isCastoutsEnabled">
+          <angular-message desc="Label for enabling castouts" key="options_enable_castouts">
+            Enable casting to Hangouts
+          </angular-message>
+        </input>
+      </p>
+      <p>
+        <angular-message desc="Label for default hangout domain" key="options_default_hangout_domain">
+          Default Hangout domain:
+        </angular-message>
+        <input ng-model="defaultDomain" type="text" id="defaultDomain"></input>
+      </p>
+    </section>
+  </div>
+  <div ng-show="showDevSettings || doubleClicks > 1" class="options-sections">
+    <section>
+      <h3>
+        <angular-message desc="Developer settings session title" key="options_developer_settings_sesison_title">
+          Developer Settings
+        </angular-message>
+      </h3>
+      <p>
+        <button ng-click="enableLogWindow()" id="enableLogWindow">Enable Log Window</button>
+      </p>
+      <p>
+        <angular-message desc="Label for additional receiver IPs" key="options_additional_receiver_ips">
+          Additional receiver IPs:
+        </angular-message>
+        <br/>
+        <div ng-repeat="id in fixedDeviceIps">
+          {{id}}
+          <a ng-click="removeFixedIpReceiver(id)" href="" id="removeFixedIpReceiver">
+            <angular-message desc="Label for receiver IP deletion" key="options_receiver_ip_deletion">
+              delete
+            </angular-message>
+          </a>
+        </div>
+        <form ng-submit="addFixedIpReceiver()" id="addFixedIpReceiver">
+          <input ng-model="newReceiverIp" type="text" size="30" id="newReceiverIp"/>
+          <input type="submit" value="add"/>
+        </form>
+      </p>
+    </section>
+  </div>
+  <div ng-show="showDevSettings" class="options-sections">
+    <section>
+      <h3>
+        <angular-message desc="Label for custom mirroring settings section" key="options_custom_mirroring_settings">
+          Custom mirroring settings
+        </angular-message>
+      </h3>
+      <table border="0">
+        <tr><td colspan=2><b>
+          <angular-message desc="Warning for tab casting quality setting" key="options_tab_casting_quality_warning">
+            Recommended for advanced users only.  Setting Tab Casting Quality will reset these values.
+          </angular-message>
+        </b></td></tr>
+        <tr>
+          <td>
+            <angular-message desc="Label for min bitrate" key="options_min_bitrate">
+              Minimum bitrate:
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="minVideoBitrate" min="100" max="10000" type="number" size="3" id="minVideoBitrate">kbps
+            (min {{globalMinVideoBitrate}})</input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <angular-message desc="Label for max bitrate" key="options_max_bitrate">
+              Maximum bitrate:
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="maxVideoBitrate" min="100" max="10000" type="number" size="3" id="maxVideoBitrate">kbps
+            (max {{globalMaxVideoBitrate}})</input>
+          </td>
+        </tr>
+        <tr ng-show="isInternal">
+          <td>
+            <angular-message desc="Label for min latency" key="options_min_latency">
+              Minimum latency:
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="minLatency" min="10" max="1000" type="number" size="3" id="minLatency">ms
+            (min 10)</input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <angular-message desc="Label for max latency" key="options_max_latency">
+              Maximum latency:
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="maxLatency" min="10" max="1000" type="number" size="3" id="maxLatency">ms
+            (max 1000)</input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <angular-message desc="Label for max capture frame rate" key="options_max_capture_frame_rate">
+              Maximum capture frame rate:
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="maxFrameRate" type="number" min="1" max="1000" size="3" id="maxFrameRate">fps</input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <angular-message desc="Label for image resolution" key="options_image_resolution">
+              Resolution:
+            </angular-message>
+          </td>
+          <td>
+            <label ng-repeat="r in videoResolutions">
+              <input ng-model="$parent.videoResolution" type="radio" value="{{r.name}}" id="{{r.name}}"/>
+              {{r.displayName}}
+            </label>
+          </td>
+        </tr>
+        <tr ng-show="isInternal">
+          <td>
+            <angular-message desc="Label for pacing target" key="options_pacing_target">
+              Packets per batch (target):
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="pacerTarget" type="number" min="1" max="1000" size="3" id="pacingTarget">packets</input>
+          </td>
+        </tr>
+        <tr ng-show="isInternal">
+          <td>
+            <angular-message desc="Label for pacing max" key="options_pacing_max">
+              Packets per batch (max):
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="pacerMax" type="number" min="1" max="1000" size="3" id="pacingMax">packets</input>
+          </td>
+        </tr>
+        <tr ng-show="isInternal">
+          <td>
+            <angular-message desc="Label for DSCP" key="options_dscp">
+              DSCP:
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="isDSCPEnabled" type="checkbox" id="isDSCPEnabled">
+          </td>
+        </tr>
+        <tr ng-show="isInternal">
+          <td>
+            <angular-message desc="Label for media streaming mode" key="options_media_streaming_mode">
+              Media Streaming Mode:
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="isMediaStreamingModeEnabled" type="checkbox" id="isMediaStreamingModeEnabled">
+          </td>
+        </tr>
+        <tr ng-show="isInternal">
+          <td>
+            <angular-message desc="disable background scan label" key="options_disable_scan">
+              Disable Background Scan:
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="isScanDisabled" type="checkbox" id="isScanDisabled">
+          </td>
+        </tr>
+        <tr ng-show="isInternal">
+          <td>
+            <angular-message desc="disable background scan label" key="options_non_blocking_io">
+              Enables Non-Blocking IO on Windows:
+            </angular-message>
+          </td>
+          <td>
+            <input ng-model="isNonBlockingIOEnabled" type="checkbox" id="isNonBlockingIOEnabled">
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+  <div ng-show="isInternal" class="options-sections">
+    <section>
+      <h3>
+        <angular-message desc="Label for cloud settings section" key="options_tab_cloud_settings">
+          Cloud Settings
+        </angular-message>
+      </h3>
+      <p>
+        <input ng-model="isCloudEnabled" type="checkbox" id="isCloudEnabled">
+          <angular-message desc="Label for enabling cloud features" key="options_enable_cloud">
+            Enable Cloud Features
+          </angular-message>
+        </input>
+      </p>
+    </section>
+  </div>
+</body>
+</html>

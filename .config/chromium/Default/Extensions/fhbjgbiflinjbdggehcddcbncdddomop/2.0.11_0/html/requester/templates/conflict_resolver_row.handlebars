@@ -1,0 +1,15 @@
+<tr id="conflictRow-{{model}}-{{model_id}}-{{key}}" class="conflictRow">
+    <td>{{model}}</td>
+    <td>{{nameOrId}}</td>
+    <td>{{key}}</td>
+    <td>
+        <label class="radio">
+            <input type="radio" name="{{model}}:{{nameOrId}}:{{key}}" id="{{model}}-{{model_id}}-{{key}}-server" value="{{serverValue}}" data-conflict-id="{{conflictId}}" data-which-change="server" data-local-action="{{localAction}}" data-remote-action="{{remoteAction}}" data-model="{{model}}" data-model-id="{{id}}" data-key="{{key}}"> {{serverValue}}
+        </label>
+    </td>
+    <td>
+        <label class="radio">
+            <input type="radio" name="{{model}}:{{nameOrId}}:{{key}}" id="{{model}}-{{model_id}}-{{key}}-local" value="{{localValue}}" data-conflict-id="{{conflictId}}" data-which-change="local" data-local-action="{{localAction}}" data-remote-action="{{remoteAction}}" data-model="{{model}}" data-model-id="{{id}}" data-key="{{key}}" checked> {{localValue}}
+        </label>
+    </td>
+</tr>

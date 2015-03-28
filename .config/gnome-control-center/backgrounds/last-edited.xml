@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper>
+    <name>Solid Color</name>
+    <filename>(none)</filename>
+    <options>none</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#2e2e34343636</pcolor>
+    <scolor>#5789ca</scolor>
+  </wallpaper>
+</wallpapers>

@@ -1,0 +1,89 @@
+<li id="collection-{{id}}" data-id="{{id}}" class="sidebar-collection">
+    <div class="sidebar-collection-head">
+        {{#if subscribed}}
+            {{#ifEditable write}}
+                <!--<div class="collection-head-actions">-->
+            {{else}}
+                <!--<div class="collection-head-actions collection-editable-false">-->
+            {{/ifEditable}}
+        {{else}}
+            <!--<div class="collection-head-actions">-->
+        {{/if}}
+        <div class="collection-head-actions">
+
+            <a
+               data-placement="bottom"
+               rel="tooltip" data-original-title="Add folder"
+               ref="#modal-add-folder" data-toggle="modal"
+               class="collection-actions-add-folder" data-id="{{id}}" data-name="{{name}}">
+                <span class="icon-collection-new-folder"></span></a>
+            <a
+               data-placement="bottom"
+               rel="tooltip" data-original-title="Edit collection"
+               ref="#modal-edit-collection" data-toggle="modal"
+               class="collection-actions-edit" data-id="{{id}}" data-name="{{name}}">
+                <span class="icon-collection-edit"></span></a>
+
+            <a rel="tooltip"
+               data-original-title="Duplicate collection"
+               data-placement="bottom"
+               class="collection-action-duplicate"
+               data-id="{{id}}">
+                <span class="icon-collection-copy"></span></a>
+            <a
+               data-placement="bottom"
+               rel="tooltip" data-original-title="Share collection"
+               class="collection-actions-download" data-id="{{id}}">
+                <span class="icon-collection-share"></span></a>
+
+            {{#if subscribed}}
+                <a rel="tooltip" data-original-title="Unsubscribe from collection"
+                   data-name="{{name}}"
+                   data-placement="bottom" data-toggle="modal"
+                   class="collection-actions-unsubscribe" data-id="{{id}}" data-owner="{{owner}}">
+                    <span class="icon-collection-delete"></span></a>
+            {{else}}
+                <a rel="tooltip" data-original-title="Delete collection"
+                   data-name="{{name}}"
+                   data-placement="bottom" data-container="body"
+                   href="#modal-delete-collection" data-toggle="modal"
+                   class="collection-actions-delete" data-id="{{id}}" data-shared="{{sharedWithTeam}}">
+                    <span class="icon-collection-delete"></span></a>
+            {{/if}}
+
+
+        </div>
+        <div class="sidebar-collection-head-name" data-id="{{id}}">
+            <span class="sidebar-collection-head-dt">
+              <span class="icon-dt"></span>
+            </span>
+            <span class="sidebar-collection-head-cname">
+                {{name}}
+            </span>
+            <br>
+            <!--
+            {{#if subscribed}}
+                <span class="label label-info" rel="tooltip" data-original-title="You have subscribed to this collection" data-placement="bottom">Sub</span>
+                {{#ifEditable write}}
+                    <span class="label label-warning" rel="tooltip" data-original-title="You can edit this collection" data-placement="bottom">Edit</span>
+                {{else}}
+                    <span class="label label-important" rel="tooltip" data-original-title="You cannot edit this collection" data-placement="bottom">Read</span>
+                {{/ifEditable}}
+            {{else}}
+                {{#if sharedWithTeam}}
+                    <span class="label label-success" rel="tooltip" data-original-title="You have shared this collection with your team" data-placement="bottom">Shared</span>
+                    {{#ifEditable write}}
+                        <span class="label label-warning" rel="tooltip" data-original-title="Subscribers can edit this collection" data-placement="bottom">Edit</span>
+                    {{else}}
+                        <span class="label label-important" rel="tooltip" data-original-title="Subscribers cannot edit this collection" data-placement="bottom">Read</span>
+                    {{/ifEditable}}
+                {{/if}}
+            {{/if}}
+            //-->
+        </div>
+    </div>
+    <div id="collection-children-{{id}}" class="collection-children">
+      <ul id="folders-{{id}}" class="folders"></ul>
+      <ul id="collection-requests-{{id}}" class="sidebar-collection-requests"></ul>
+    </div>
+</li>

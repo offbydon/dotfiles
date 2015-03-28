@@ -1,0 +1,15 @@
+/*
+Build tools available to atom-build.
+These are sorted in order of priority
+and divided into groups as seen by comments below
+*/
+module.exports = [
+/* generic (can be configured to do anything) */
+require("./atom-build"),
+
+/* semi-generic (may trigger other build scripts) */
+require("./npm_apm"), require("./Grunt"), require("./gulp"), require("./make"),
+
+/* specific (builds only one thing) */
+require("./Elixir"), require("./Cargo")];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL29wcy8uYXRvbS9wYWNrYWdlcy9idWlsZC9saWIvdG9vbHMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFLQSxNQUFNLENBQUMsT0FBTyxHQUFHOztBQUVmLE9BQU8sQ0FBQyxjQUFjLENBQUM7OztBQUd2QixPQUFPLENBQUMsV0FBVyxDQUFDLEVBQ3BCLE9BQU8sQ0FBQyxTQUFTLENBQUMsRUFDbEIsT0FBTyxDQUFDLFFBQVEsQ0FBQyxFQUNqQixPQUFPLENBQUMsUUFBUSxDQUFDOzs7QUFHakIsT0FBTyxDQUFDLFVBQVUsQ0FBQyxFQUNuQixPQUFPLENBQUMsU0FBUyxDQUFDLENBQ25CLENBQUMiLCJmaWxlIjoiL2hvbWUvb3BzLy5hdG9tL3BhY2thZ2VzL2J1aWxkL2xpYi90b29scy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG5CdWlsZCB0b29scyBhdmFpbGFibGUgdG8gYXRvbS1idWlsZC5cblRoZXNlIGFyZSBzb3J0ZWQgaW4gb3JkZXIgb2YgcHJpb3JpdHlcbmFuZCBkaXZpZGVkIGludG8gZ3JvdXBzIGFzIHNlZW4gYnkgY29tbWVudHMgYmVsb3dcbiovXG5tb2R1bGUuZXhwb3J0cyA9IFtcbiAgLyogZ2VuZXJpYyAoY2FuIGJlIGNvbmZpZ3VyZWQgdG8gZG8gYW55dGhpbmcpICovXG4gIHJlcXVpcmUoJy4vYXRvbS1idWlsZCcpLFxuXG4gIC8qIHNlbWktZ2VuZXJpYyAobWF5IHRyaWdnZXIgb3RoZXIgYnVpbGQgc2NyaXB0cykgKi9cbiAgcmVxdWlyZSgnLi9ucG1fYXBtJyksXG4gIHJlcXVpcmUoJy4vR3J1bnQnKSxcbiAgcmVxdWlyZSgnLi9ndWxwJyksXG4gIHJlcXVpcmUoJy4vbWFrZScpLFxuXG4gIC8qIHNwZWNpZmljIChidWlsZHMgb25seSBvbmUgdGhpbmcpICovXG4gIHJlcXVpcmUoJy4vRWxpeGlyJyksXG4gIHJlcXVpcmUoJy4vQ2FyZ28nKVxuXTtcbiJdfQ==
