@@ -18,12 +18,12 @@
    },
    "network_time": {
       "network_time_mapping": {
-         "local": 1427553043819.606,
-         "network": 1427553043828.868
+         "local": 1427579010145.314,
+         "network": 1427579010354.058
       }
    },
    "ntp": {
-      "promo_resource_cache_update": "1427551737.154401"
+      "promo_resource_cache_update": "1427573337.155462"
    },
    "policy": {
       "last_statistics_update": "13072025332153075"
@@ -31,7 +31,7 @@
    "profile": {
       "info_cache": {
          "Default": {
-            "active_time": 1427557033.924131,
+            "active_time": 1427587578.289965,
             "avatar_icon": "chrome://theme/IDR_PROFILE_AVATAR_0",
             "background_apps": false,
             "is_ephemeral": false,
@@ -73,7 +73,7 @@
          "exited_cleanly": false,
          "extension_renderer_crash_count": 0,
          "incomplete_session_end_count": 0,
-         "last_timestamp_sec": "1427556832",
+         "last_timestamp_sec": "1427587410",
          "launch_count": 3,
          "launch_time_sec": "1427551732",
          "page_load_count": 0,

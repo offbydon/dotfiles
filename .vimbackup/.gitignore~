@@ -13,3 +13,6 @@ Videos/
 Examples/
 .git/
 .pki/
+.cache/
+.chrome/
+

@@ -22,13 +22,19 @@
 # Registers:
 
 # File marks:
-'0  18  0  ~/.gitignore
-'1  14  5  ~/.gitignore
-'2  2  0  ~/[Vundle] clean
-'3  119  41  ~/.bashrc
+'0  18  7  ~/.gitignore
+'1  1  0  ~/.config/user-dirs.locale
+'2  48  18  ~/.config/NERD_tree_1
+'3  14  5  ~/.gitignore
+'4  2  0  ~/[Vundle] clean
+'5  119  41  ~/.bashrc
 
 # Jumplist (newest first):
--'  18  0  ~/.gitignore
+-'  18  7  ~/.gitignore
+-'  1  0  ~/.config/user-dirs.locale
+-'  34  18  ~/.config/NERD_tree_1
+-'  1  12  ~/.config/NERD_tree_1
+-'  48  18  ~/.config/NERD_tree_1
 -'  15  5  ~/.gitignore
 -'  14  5  ~/.gitignore
 -'  2  0  ~/[Vundle] clean
@@ -96,8 +102,13 @@
 -'  119  41  ~/.bashrc
 -'  1  0  ~/.bashrc
 -'  119  41  ~/.bashrc
--'  1  0  ~/.bashrc
+-'  1  0  ~/.config/user-dirs.locale
+-'  34  18  ~/.config/NERD_tree_1
+-'  1  12  ~/.config/NERD_tree_1
+-'  48  18  ~/.config/NERD_tree_1
 -'  2  0  ~/[Vundle] clean
+-'  119  41  ~/.bashrc
+-'  1  0  ~/.bashrc
 -'  119  41  ~/.bashrc
 -'  1  0  ~/.bashrc
 -'  119  41  ~/.bashrc
@@ -117,9 +128,9 @@
 # History of marks within files (newest to oldest):
 
 > ~/.gitignore
-	"	18	0
-	^	18	0
-	.	17	8
+	"	18	7
+	^	18	8
+	.	18	7
 	+	7	7
 	+	12	0
 	+	11	15
@@ -128,6 +139,28 @@
 	+	14	5
 	+	15	5
 	+	17	8
+	+	18	7
+
+> ~/.config/NERD_tree_1
+	"	34	18
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/.config/user-dirs.locale
+	"	1	0
 
 > ~/[Vundle] Installer
 	"	70	0
